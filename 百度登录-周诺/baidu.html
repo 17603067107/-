@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>百度</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style-1.0.0.css" />
+		<link rel="stylesheet" type="text/css" href="css/style-1.0.11.css" />
+		<script src="js/JqLite.js"></script>
+		<script src="js/tools.js"></script>
+		<script src="js/cookie.js"></script>
+		<script src="js/baidu_index.js"></script>
+		
+	</head>
+	<body>
+		<!--nav-->
+		<div class="nav">
+			<div class="nav-box">
+				<a href="#" id="btn" class="btn">新闻</a>
+				<a href="#" id="btn" class="btn">hao123</a>
+				<a href="#" id="btn" class="btn">地图</a>
+				<a href="#" id="btn" class="btn">视频</a>
+				<a href="#" id="btn" class="btn">贴吧</a>
+				<a href="#" id="btn" class="btn">学术</a>
+				<a href="#" id="btn_login" class="btn">登录</a>
+				<a href="#" id="btn_set" class="btn">
+					设置
+					<ul id="set">
+						<li>搜索设置</li>
+						<li>高级搜索</li>
+						<li>关闭预测</li>
+						<li>搜索历史</li>
+					</ul>
+				</a>
+				<a href="#" id="btn_more" class="btn_more">更多产品</a>
+							
+			</div>
+			<div id="right-nav">
+					<a href="#"  class="btn_more" id="nav-frist">更多产品</a>
+					<a href="#"  class="btn_more">
+						<span class="bdbriimgitem_1"></span>
+						糯米
+					</a>
+					<a href="#"  class="btn_more">
+						<span  class="bdbriimgitem_2"></span>
+						音乐
+					</a>
+					<a href="#"  class="btn_more">
+						<span  class="bdbriimgitem_3"></span>
+						图书 
+					</a>
+					<a href="#"  class="btn_more">
+						<span  class="bdbriimgitem_4"></span>
+						知道
+					</a>
+					<a href="#"  class="btn_more">
+						<span  class="bdbriimgitem_5"></span>
+						文库
+					</a>
+					<a href="#"  class="btn_more">
+						<span  class="bdbriimgitem_6"></span>
+						风云榜
+					</a>
+					<a href="#"  class="btn_more">
+						全部产品&raquo;
+					</a>
+				</div>
+			
+		</div>
+		<!--header-->
+		<div class="header">
+			<div class="logo">
+				<h1>
+					<a href="#" title="欢迎来到百度">百度</a>
+				</h1>
+			</div>
+			<div class="search">
+				<form class="form_search">
+					<input type="text" class="txt" id="txt" autocomplete="off"/>
+<!--					<input type="button" value="百度一下" id="login1" class="login1" />-->
+						<button id="login1" class="login1">百度一下</button>
+					<i class="iconfont i">&#xe615;</i>
+				</form>
+				
+				<div class="soutu">
+					<div class="soutu_drag">
+						<span class="soutu-drop-tip">拖拽图片到这里</span>
+						<div class="soutu-drop-icon"></div>							
+					</div>
+					<button class="soutu_sub">						
+						<div class="soutu-icon"></div>
+						本地上传图片
+						<input type="file" class="upload-pic" value="上传图片"/>
+					</button>
+					<i class="iconfont del_soutu" id="del_soutu">&#xe612;</i>
+				</div>
+				<ul id="list-search">
+					
+				</ul>
+			</div>
+			
+			
+		</div>
+		<!--footer-->
+		<div class="footer">
+			<img src="images/qr01.jpg"  />
+			<h3>手机百度</h3>
+			<div class="content1">
+				<a href="#">把百度设为首页</a>
+				<a href="#">关于百度</a>
+				<a href="#">About Baidu</a>
+				<a href="#">百度推广</a>
+			</div>
+			<div class="content2">
+				<p>&copy;2017 Baidu</p>
+				<a href="#">使用百度前必读</a>
+				<a href="#">意见反馈</a>
+				<p>京ICP证030173号<i class="iconfont">&#xe774;</i></p>
+				<a href="#">京公网安备11000002000001号</a>
+				<i class="iconfont police">&#xe605;</i>
+			</div>
+		<div>
+			
+			
+		<!--登录页面-->
+		<div class="all">
+			<span id="allcover"></span>
+			<div class="login" id="login">
+				<span id="show_error"></span>
+				<div class="nav" id="nav">
+					<i class="iconfont i1">&#xe604;</i>
+					<h2>登录百度账号</h2>
+					<i class="iconfont i2" id="del">&#xe612;</i>
+				</div>
+				
+				<div class="contente1">
+					<i class="iconfont">&#xe627;</i>
+					<span>短信快捷登录</span>
+				</div>
+				
+				<form>
+					<input type="text" placeholder="手机/邮箱/同户名" class="txt1" id="txt1" />
+					<input type="password" placeholder="密码" class="txt2" id="txt2" />
+					<input type="text" placeholder="输入验证码" id="verify"/> 					
+					<span id="change_again">
+						换一张
+					</span>
+					<span id="auth_code">1234</span>
+					<i class="iconfont i3">&#xe6b3;</i>
+					<i class="iconfont i4">&#xe600;</i>
+					
+				</form>
+				
+				<div class="content2">
+					<div class="c02-left">
+						<input type="checkbox" class="checkbox"  />
+						<span>下次自动登录</span>
+					</div>
+					<a href="#">登录遇到问题</a>
+				</div>
+				
+				<div class="content3">
+					<div class="box" >
+						<a href="#" id="login_enter">登录</a>
+					</div>
+				</div>
+				
+				<div class="content4">
+					<a href="register.html" target="_blank">立即注册</a>
+				</div>
+				
+				<div class="footer">
+					<p>可以使用以下方式登录</p>
+					<div class="f-bottom">
+						<a href="#" class="a1">
+							<i class="iconfont i4">&#xe699;</i>
+						</a>
+						<a href="#" class="a2">
+							<i class="iconfont i4">&#xe637;</i>
+						</a>
+					</div>
+					<img src="images/images/1_03.jpg" />
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

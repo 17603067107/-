@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>register</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style-1.0.1.css" />
+		<script src="js/cookie.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+			 var userName=$$("userName");
+			 var password1=$$("password1");
+			 var password2=$$("password2");
+			 var phone=$$("phone");
+			 var ver=$$("ver");
+			 var yanzhen=$$('yanzhen');
+			 var goreg=$$("goreg");
+			 var show=$$("show");
+			 var showUser=$$("showUser");
+				
+				var flag=false;
+				
+				
+				userName.onblur=function(){
+					console.log(userName.value);
+					if(!/^[a-zA-Z]\w{4,20}$/.test(userName.value)){
+						show.value="用户名格式错误";
+						flag=false;
+					}else{
+						flag=true;
+					}
+					
+				}
+				password1.onblur=function(){
+					if(!/^.{8,20}$/.test(password1.value)){
+						show.value="密码格式错误";
+						flag=false;
+					}else{
+						flag=true;
+					}					
+				}
+				password2.onblur=function(){
+					if(password1.value!=password2.value){
+						show.value="重复密码错误";
+						flag=false;
+					}else{
+						flag=true;
+					}		
+				}
+				phone.onblur=function(){
+					if(!/^(1)\d{10}$/.test(phone.value)){
+						show.value="电话格式输入错误";
+						flag=false;
+					}else{
+						flag=true;
+					}
+				}
+				ver.onfocus=function(){
+					var num=Math.floor(Math.random()*8999+1000);
+					
+					yanzhen.innerHTML=num;
+					yanzhen.style.fontSize="30px";
+					yanzhen.style.backgroundColor="chartreuse";
+//					console.log(num);
+	
+				}
+				ver.onblur=function(){
+					if(ver.value!=yanzhen.innerHTML){
+						show.innerHTML="输入验证码不正确";
+						flag=false;
+					}else{
+						flag=true;
+					}
+				}
+				
+									
+					goreg.onclick=function(){
+						if(flag){
+								showUser.innerHTML=" ";
+								var userCookie=getCookie("user");
+								var newCookieArr=[];
+								var user={
+										username:userName.value,
+										passWord:password2.value,
+										phone:phone.value,							
+									}
+								newCookieArr.push(user);
+								console.log(userCookie)
+								
+								userCookie=JSON.parse(userCookie);
+								
+								var saveCookieArr;
+								
+								if(!userCookie){
+									saveCookieArr=newCookieArr;
+									
+								}else{
+									
+									if(haveUserConkis(userCookie,user)){
+										show.value="用户已存在";	
+									}else{
+										saveCookieArr=userCookie.concat(user);
+									}
+								}
+								
+								setCookie("user",JSON.stringify(saveCookieArr),1000000000);
+								
+								for (var i = 0;i<saveCookieArr.length;i++) {
+										showUser.innerHTML+=saveCookieArr[i].username+"  ";
+								}
+								
+								
+						}
+	
+						//判断cookie是否存在
+						function haveUserConkis(userCookie,user){
+							
+							for(var i=0;i<userCookie.length;i++){
+						 		if(userCookie[i].username==user.username)
+						 			return true;
+						 	
+						 	}						
+						}
+						
+					}
+					
+					
+			
+				
+			}
+		</script>
+	</head>
+	<body>
+		<!--header-->
+		<div class="header">
+			<div class="h-left">
+				<div class="logo">
+					<h1>
+						<a href="#" title="欢迎来到百度">百度</a>
+					</h1>
+				</div>
+				<span></span>
+				<h2>注册百度账号</h2>
+			</div>
+			<div class="h-right">
+				<p>我已注册，现在就</p>
+				<input type="button" value="登录" class="hButton" />
+			</div>
+			<div class="bgimg">
+				<img src="images/img_07.jpg"  />
+			</div>
+		</div>
+		<!--注册-->
+		<ul class="list">
+			<li>
+				<p>用户名</p><input type="text" placeholder="请设置用户名" id="userName"/>
+			</li>
+			<li>
+				<p>密码</p><input type="password" placeholder="请设置密码" id="password1"/>
+			</li>
+			<li>
+				<p>重复密码</p><input type="password" placeholder="请重新输入密码" id="password2"/>
+			</li>
+			<li>
+				<p>手机号</p><input type="text" placeholder="请设置手机号" id="phone" />
+			</li>
+			<li>
+				<p>验证码</p><input type="text" placeholder="请设置验证码" id="ver"/><span id="yanzhen"></span>
+			</li>
+			<li>
+				<input type="button" value="注册" class="goreg" id="goreg" />
+			</li>
+			<li>
+				<input type="button" value="显示" class="goreg" id="show" />
+			</li>
+		</ul>
+		<div class="registered">
+			<p>已经注册的账号:<span id="showUser"></span></p>
+		</div>
+	</body>
+</html>

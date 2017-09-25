@@ -1,0 +1,336 @@
+/*nav*/
+
+.nav{
+	
+	height: 148px;
+	width: 100%;
+	position: relative;
+}
+.nav .nav-box{
+	float: right;
+	overflow:hidden;
+}
+.nav .nav-box a{
+	display: block;
+	float: left;
+	font-size: 14px;
+	line-height: 24px;
+	color: #000;
+	text-decoration: underline;
+	font-weight: 900;	
+	margin-right: 20px;
+	margin-top: 15px;
+}
+#btn_more{
+	background:deepskyblue;
+	font-weight: 100;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.nav .nav-box .btn_more{
+	display: block;
+	float:left;	
+	width:60px;
+	height: 24px;
+	text-align: center;
+	font-size:14px;
+	line-height: 24px;
+	color: #000;
+	text-decoration:underline;
+	font-weight: 900;
+	margin-left: 10px;
+	margin-right: 20px;
+	margin-top: 15px;
+}
+
+#right-nav{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #f9f9f9;
+	width: 100px;	
+	display: none;
+	text-align: center;
+
+}
+#right-nav a{
+	display: block;
+	font-size:14px;
+	width: 100px;
+	color: #000000;
+	font-weight: 100;
+	height: 86px;
+	margin: auto;
+	text-decoration: none;	
+	
+}
+#right-nav a span{
+	height: 36px;
+	width: 36px;
+	display: block;
+	margin: auto;
+	
+}
+#set {
+	width: 80px;
+	height: 122px;
+	border: 1px solid #EEEEEE;
+	position: absolute;
+	right: 85px;
+	top: 52px;
+	text-align: center;
+	display: none;
+}
+#set  li{
+	font-size: 12px;
+	line-height: 30px;
+	font-weight: 100;
+	cursor: pointer;
+	
+	text-decoration: none;
+}
+
+#right-nav #nav-frist{
+	height: 40px;
+	line-height: 55px;
+	margin-bottom: 10px;
+}
+
+#right-nav  .bdbriimgitem_1{
+	width: 36px;
+	background: url(../images/logo_right.png) no-repeat;
+	
+	
+}
+#right-nav  .bdbriimgitem_2{
+	width: 36px;
+	background: url(../images/logo_right.png) no-repeat;
+	background-position: -36px 0px;
+	
+}
+#right-nav  .bdbriimgitem_3{
+	width: 40px;
+	background: url(../images/logo_right.png) no-repeat;
+	background-position: -72px 0px;
+	
+}
+#right-nav  .bdbriimgitem_4{
+	width: 36px;
+	background: url(../images/logo_right.png) no-repeat;
+	background-position: -112px 0px;
+	
+}
+#right-nav  .bdbriimgitem_5{
+	background: url(../images/logo_right.png) no-repeat;
+	background-position: -148px 0px;
+	
+}
+#right-nav  .bdbriimgitem_6{
+	width:40px;
+	background: url(../images/logo_right.png) no-repeat;
+	background-position: -182px 0px;
+	
+}
+
+#right-nav a:hover{
+	text-decoration: underline;
+}
+
+
+.header{
+	width: 100%;
+	height: 145px;
+}
+.header .logo{
+	background: url(../images/logo.jpg) no-repeat;
+	width: 169px;
+	height: 55px;
+	margin: auto;
+}
+.header .logo h1 a{
+	display: block;
+	width: 169px;
+	height: 55px;
+	text-indent: -9999px;
+}
+
+.header .search{
+	height: 36px;
+	margin: auto;
+	width: 640px;
+	margin-top: 38px;
+	outline: none;
+	position: relative;
+}
+.header .search .txt{
+	width: 519px;
+	height: 34px;
+	font-size: 14px;
+	border: 0;
+	padding-left: 20px;
+	border: 1px solid #999;
+	border-right: none;
+	float: left;
+	position: relative;
+}
+.header .search .login1{
+	width: 100px;
+	height: 36px;
+	border: 0;
+	background: #3385ff;
+	font-size: 14px;
+	color: #fff;
+	float: left;
+	cursor: pointer;
+}
+.header .search .i{
+	font-size: 24px;
+	color: #999;
+	position: absolute;
+	right: 114px;
+	top: 8px;
+	cursor: pointer;
+}
+
+
+.header .search .soutu{
+	height: 200px;
+	padding: 53px 20px 27px;
+	border: 1px solid #1B66C7;
+	display: none;
+	
+	
+}
+
+
+.header .search .soutu .soutu_drag{
+	text-align: center;
+   	height: 75px;
+   	padding-top: 30px;
+    margin-bottom: 16px;
+    background-color: #fafafa;
+}
+
+.header .search .soutu-drop-tip{
+	display: block;
+    font-size: 16px;
+    color: #999;
+}
+.header .search .soutu-drop-icon{
+	display: inline-block;
+	margin-top: 10px;
+    width: 28px;
+    height: 28px;
+    background: url(../images/soutu_icons_sample.png) no-repeat;
+    background-position: -70px -2px;
+}
+.header .search .soutu_sub{
+    width: 158px;
+    height: 43px;
+    font-size: 16px;
+    border: 1px solid #cacbcc;
+    line-height: 43px;
+    margin-left: 230px;
+    margin-top: 20px;
+    color: #333;
+    background: #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+
+}
+.header .search .upload-pic{
+	position: absolute;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+	left: 0px;
+    z-index: 1;
+    cursor: pointer;
+	
+	
+}
+.header .search .soutu-icon{
+	display: inline-block;
+	position: relative;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    
+	background: url(../images/soutu_icons_sample.png)no-repeat;
+	background-position: -144px 0;
+}
+#del_soutu{
+	position: absolute;
+	font-size: 24px;
+	right: 15px;
+	bottom: -232px;
+	cursor: pointer;
+}
+.footer{
+	text-align: center;
+}
+.footer img{
+	width: 61px;
+	height: 62px;
+	margin-top: 254px;
+}
+.footer h3{
+	font-size: 12px;
+	color: #666666;
+	margin-top: 7px;
+}
+.footer .content1{
+	overflow: hidden;
+	width: 350px;
+	margin: auto;
+	margin-top: 24px;
+}
+.footer .content1 a{
+	display: block;
+	float: left;
+	font-size: 12px;
+	color: #999999;
+	text-decoration: underline;
+	padding: 0px 12px;
+}
+.footer .content2{
+	overflow: hidden;
+	width: 550px;
+	margin: auto;
+	margin-top: 10px;
+}
+.footer .content2 a{
+	display: block;
+	float: left;
+	font-size: 12px;
+	color: #999999;
+	text-decoration: underline;
+	padding: 0px 2px;
+}
+.footer .content2 p{
+	display: block;
+	float: left;
+	font-size: 12px;
+	color: #999999;
+	padding: 0px 2px;
+}
+.footer .content2 i{
+	display: block;
+	float: left;
+	font-size: 16px;
+	color: #999999;
+	padding: 0px 2px;
+}
+.footer .content2 .police{
+	display: block;
+	float: left;
+	font-size: 16px;
+	color: #f1d566;
+	padding: 0px 2px;
+}
+

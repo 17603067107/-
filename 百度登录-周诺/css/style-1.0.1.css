@@ -1,0 +1,136 @@
+/*header*/
+.header{
+	height: 76px;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.header .h-left{
+	float: left;
+	overflow: hidden;
+}
+.header .h-left  .logo{
+	background: url(../images/logo01.jpg) no-repeat;
+	width: 169px;
+	height: 55px;
+	margin: auto;
+	float: left;
+	margin-left: 218px;
+	margin-top: 16px;
+}
+.header .h-left  .logo h1 a{
+	display: block;
+	width: 169px;
+	height: 55px;
+	text-indent: -9999px;
+}
+.header .h-left span{
+	width: 1px;
+	height: 24px;
+	background: #c9c9c9;
+	float: left;
+	margin-left: 15px;
+	margin-top: 36px;
+}
+.header .h-left h2{
+	font-size: 18px;
+	color: #666666;
+	float: left;
+	margin-left: 15px;
+	margin-top: 36px;
+}
+.header .h-right{
+	float: right;
+	overflow: hidden;
+}
+.header .h-right p{
+	font-size: 12px;
+	color: #666666;
+	float: left;
+	margin-top: 34px;
+	margin-right: 6px;
+}
+.header .h-right .hButton{
+	width: 62px;
+	height: 30px;
+	line-height: 30px;
+	background: #f7f7f7;
+	font-size: 12px;
+	color: #666666;
+	font-weight: 900;
+	text-align: center;
+	border: 0;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	float: left;
+	margin-top: 25px;
+	margin-right: 222px;
+}
+.header .bgimg{
+	width: 1201px;
+	height: 8px;
+	margin: auto;
+	
+}
+.header .bgimg img{
+	width: 1201px;
+	height: 8px;
+}
+.list li{
+	overflow: hidden;
+	margin-top: 22px;
+}
+.list li p{
+	font-size: 14px;
+	color: #000;
+	float: left;
+	margin-top: 8px;
+	margin-right: 10px;
+}
+
+.list li input{
+	width:348px;
+	height: 38px;
+	border-radius: 2px;
+	border: 0;
+	border: 1px solid #999;
+	float: left;
+	padding-left: 5px;
+}
+.list li:nth-of-type(1){
+	margin-left: 200px;
+	margin-top: 40px;
+}
+.list li:nth-of-type(2){
+	margin-left: 214px;
+}
+.list li:nth-of-type(3){
+	margin-left: 186px;
+}
+.list li:nth-of-type(4){
+	margin-left: 200px;
+}
+.list li:nth-of-type(5){
+	margin-left: 200px;
+}
+.list .goreg{
+	width: 300px;
+	height: 38px;
+	background: #008000;
+	font-size: 14px;
+	color: #fff;
+	line-height: 38px;
+	text-align: center;
+	border: 0;
+	margin-left: 268px;
+}
+.registered{
+	position: absolute;
+	top: 123px;
+	left: 885px;
+}
+.registered p{
+	font-size: 14px;
+	color: #000;
+	font-weight: 900;
+}
